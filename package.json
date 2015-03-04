@@ -1,0 +1,26 @@
+{
+  "name": "co-memoizer",
+  "version": "0.1.0",
+  "description": "Memoize your co function to redis!",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/javascriptismagic/co-memoizer.git"
+  },
+  "keywords": [
+    "co",
+    "memoize",
+    "memoizer",
+    "redis"
+  ],
+  "author": "Brian <javascriptismagic@gmail.com>",
+  "license": "Unliscense",
+  "bugs": {
+    "url": "https://github.com/javascriptismagic/co-memoizer/issues"
+  },
+  "homepage": "https://github.com/javascriptismagic/co-memoizer",
+  "dependencies": {
+    "co": "4",
+    "co-subredis": "0",
+    "glob-to-regexp": "0"
+  }
+}

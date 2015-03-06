@@ -3,7 +3,7 @@ module.exports = class MemoryMemoizer extends require './memoizer'
   constructor: (options, memoizers...) ->
     unless @ instanceof MemoryMemoizer
       return new MemoryMemoizer options
-    super memoizers
+    super.apply @, memoizers
     @cache = {}
     options or= {}
     @ttl = options.ttl|0

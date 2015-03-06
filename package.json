@@ -2,7 +2,7 @@
   "name": "co-memoizer",
   "version": "0.1.0",
   "description": "Memoize your generator functions!",
-  "engines" : {
+  "engines": {
     "node": ">=0.12",
     "coffee-script": ">=1.9"
   },
@@ -15,8 +15,16 @@
   },
   "keywords": [
     "co",
+    "koa",
     "memoize",
-    "memoizer"
+    "memoizer",
+    "generator",
+    "function",
+    "yield",
+    "asyc",
+    "await",
+    "es6",
+    "es7"
   ],
   "author": "Brian <javascriptismagic@gmail.com>",
   "license": "Unliscense",

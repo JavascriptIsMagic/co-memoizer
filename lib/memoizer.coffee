@@ -7,6 +7,7 @@ module.exports = class Memoizer extends process.EventEmitter
       memoizer.emit 'init', @
   valid: (value) -> value
   init: (parent) ->
+    @parent = parent
     parent.on 'value', @emit.bind @, 'value'
     parent.on 'remove', @emit.bind @, 'remove'
   memoize: (key, ttl, fn) ->
@@ -14,9 +15,9 @@ module.exports = class Memoizer extends process.EventEmitter
       next = @memoizers[index + 1]
       value = yield memoizer.memoize key, ttl, next.memoize.bind next
       if memoizer.valid value
-        @emit 'value', key, ttl, value
+        (@parent or @).emit 'value', key, ttl, value
         return value
     if fn
       yield fn key, ttl
   unmemoize: (key) ->
-    @emit 'remove', key
+    (@parent or @).emit 'remove', key
